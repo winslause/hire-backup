@@ -1,0 +1,334 @@
+
+        html, body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+        
+        /* Image section slide-in animation */
+        .image-section {
+            animation: slideInImage 2s ease-in-out; /* You can change this animation to any effect you want for the image */
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Define the image slide-in keyframes */
+        @keyframes slideInImage {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0; /* Fully transparent */
+            }
+            100% {
+                transform: translateY(0); /* Image back to its original position */
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        /* Initially hide the welcome card */
+        #welcomeCard {
+            display: none; /* Hide the card initially */
+            background: rgba(255, 255, 255, 0.6); /* Light background overlay */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Zoom-in animation for the welcome card */
+        .zoomInCard {
+            animation: zoomInCard 2s ease-in-out;
+        }
+
+        /* Define the zoom-in keyframes for the welcome card */
+        @keyframes zoomInCard {
+            0% {
+                transform: scale(0); /* Start with the card very small */
+                opacity: 0;          /* Fully transparent */
+            }
+            100% {
+                transform: scale(1); /* Normal size */
+                opacity: 1;          /* Fully visible */
+            }
+        }
+
+        /* About Us section */
+        #aboutCarousel {
+  position: relative;
+}
+
+/* Position arrows outside the cards */
+.carousel-control-prev, 
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5; /* Ensure arrows are above content */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border: none; /* Remove borders */
+  width: 40px; /* Optional: Adjust the width of the arrows */
+  height: 40px; /* Optional: Adjust the height of the arrows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular background */
+}
+
+
+
+#packages h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#packages .card {
+  transition: transform 0.3s ease-in-out;
+}
+
+#packages .card:hover {
+  transform: scale(1.05);
+}
+
+#animatedTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#packages .card-title {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+#packages .card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* To ensure other CSS is not affected */
+#packages * {
+  box-sizing: border-box;
+}
+
+  /* charges section */
+  #charges h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#charges .lead {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+#charges .card {
+  border: none;
+  background-color: #f9f9f9;
+}
+
+#charges .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+#charges .card-text {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#charges .text-muted {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Responsiveness for smaller devices */
+@media (max-width: 576px) {
+  #charges h2 {
+    font-size: 2rem;
+  }
+
+  #charges .card-title {
+    font-size: 1.3rem;
+  }
+
+  #charges .lead {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/* contact us section */
+/* Contact Section Background Image */
+#contact {
+  background-image: url('images/back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 0;
+}
+
+/* Container Styling */
+#contact .container {
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for readability */
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Section Title Styling */
+#contact h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#contact .lead {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+#contact form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+}
+
+#contact form .form-control {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+#contact form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+#contact .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#contact .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Details Styling */
+#contact .contact-details {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Matching shadow for uniform design */
+}
+
+#contact .contact-details h4 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#contact .contact-details p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#contact .contact-details i {
+  font-size: 1.3rem;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+/* Map Placeholder Styling */
+#mapPlaceholder {
+  background-color: #6c757d;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #contact {
+    padding: 50px 0;
+  }
+  
+  #contact .container {
+    padding: 40px;
+  }
+
+  #contact h2 {
+    font-size: 2.2rem;
+  }
+
+  #contact form {
+    padding: 2rem;
+  }
+
+  #contact .form-control {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  #contact .btn {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  #contact .contact-details {
+    padding: 2rem;
+  }
+
+  #mapPlaceholder {
+    margin-top: 20px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  #contact form {
+    padding: 1.5rem;
+  }
+
+  #contact .form-control {
+    padding: 10px;
+  }
+
+  #contact .btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  #contact .contact-details {
+    padding: 1.5rem;
+  }
+}

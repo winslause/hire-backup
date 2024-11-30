@@ -1,0 +1,237 @@
+
+    /* Custom styling for sidebar */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #343a40; /* Dark background for sidebar */
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 20px;
+      transition: width 0.3s, visibility 0.3s;
+    }
+
+    .sidebar .nav-link {
+      color: #adb5bd;
+      padding: 12px 20px;
+      font-size: 16px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar .nav-link:hover {
+      background-color: #495057;
+      color: #fff;
+    }
+
+    .sidebar .nav-link i {
+      margin-right: 10px;
+    }
+
+    .sidebar-heading {
+      color: #f8f9fa;
+      padding: 15px;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #6c757d;
+      margin-bottom: 10px;
+    }
+
+    /* Content styling to account for sidebar */
+.content {
+  margin-left: 250px; /* Same width as the sidebar */
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top instead of center */
+  align-items: center; /* Horizontally center the content */
+  text-align: center; /* Center text */
+  margin-top: 40px; /* Add space from the top */
+  transition: margin-left 0.3s, margin-top 0.3s;
+}
+
+
+   /* Responsive for screens smaller than 950px */
+@media (max-width: 950px) {
+  /* Sidebar collapse behavior for screens less than 950px */
+  .sidebar {
+    width: 0; /* Hide sidebar by default */
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .sidebar.active {
+    width: 250px; /* Sidebar expands when active */
+    visibility: visible;
+  }
+
+  /* Content shifts to full width when sidebar is collapsed */
+  .content {
+    margin-left: 0; /* No left margin when sidebar is hidden */
+  }
+
+  /* Toggle button for sidebar on smaller screens */
+  .toggle-sidebar {
+    display: inline-block;
+    position: fixed;
+    top: 15px;
+    right: 15px; /* Positioned at the top right corner */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 18px; /* Slightly larger padding for better touch targets */
+    font-size: 18px;
+    z-index: 999; /* Ensure the button is above other elements */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Rounded corners for the button */
+  }
+}
+
+/* Make sidebar functional between 550px and 950px screen width */
+@media (min-width: 600px) and (max-width: 950px) {
+  /* Sidebar should be visible by default, but toggleable */
+  .sidebar {
+    width: 250px; /* Sidebar takes up space */
+    visibility: visible;
+  }
+
+  .sidebar.active {
+    width: 250px; /* Sidebar remains the same width when active */
+    visibility: visible;
+  }
+
+  /* Content adjusts for the sidebar width */
+  .content {
+    margin-left: 250px; /* Content moves to the right to make space for sidebar */
+  }
+
+  /* Toggle icon should be visible in this range */
+  .toggle-sidebar {
+    display: inline-block;
+  }
+}
+
+/* Additional behavior for larger screens */
+@media (min-width: 951px) {
+  .toggle-sidebar {
+    display: none; /* Hide the toggle icon on larger screens */
+  }
+
+  /* Ensure the sidebar is always visible on larger screens */
+  .sidebar {
+    width: 250px;
+    visibility: visible;
+  }
+}
+
+
+#add-vehicle h2 {
+    font-size: 2rem;
+    color: #343a40;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .form-control, .form-select {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-success {
+    border-radius: 1rem;
+    padding: 10px 20px;
+  }
+
+  .btn-success:hover {
+    background-color: #218838;
+  }
+
+  .form-label i {
+    color: #28a745;
+    margin-right: 8px;
+  }
+
+  #our-clients h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    text-transform: uppercase;
+  }
+
+  /* Table Styling */
+  .table {
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .thead-dark {
+    background-color: #343a40;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+  }
+
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #ddd;
+  }
+
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Button Styling */
+  .btn-sm {
+    padding: 5px 10px;
+  }
+
+  .btn-info, .btn-warning, .btn-danger {
+    border-radius: 0.25rem;
+  }
+
+  /* Tooltip Styling */
+  .btn i {
+    font-size: 14px;
+  }
+  
+  /* Responsive Table */
+  .table-responsive {
+    margin-top: 20px;
+  }
+
+  /* Responsive behavior for smaller devices */
+  @media (max-width: 300px) {
+    .table thead {
+      display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+      display: block;
+      width: 100%;
+    }
+
+    .table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    .table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .table td:nth-of-type(1):before { content: "Client Name"; }
+    .table td:nth-of-type(2):before { content: "Email"; }
+    .table td:nth-of-type(3):before { content: "Phone Number"; }
+    .table td:nth-of-type(4):before { content: "ID Number"; }
+    .table td:nth-of-type(5):before { content: "Vehicle Number"; }
+    .table td:nth-of-type(6):before { content: "Datetime Picked"; }
+    .table td:nth-of-type(7):before { content: "Datetime to Return"; }
+    .table td:nth-of-type(8):before { content: "Actions"; }
+  }
