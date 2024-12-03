@@ -21,7 +21,7 @@ function sendPasswordEmail($email, $random_password)
         $mail->Host       = 'smtp.gmail.com';    // Set the SMTP server to send through
         $mail->SMTPAuth   = true;
         $mail->Username   = 'wenbusale383@gmail.com'; // SMTP username
-        $mail->Password   = 'bfmd neqb ltiv txrp';    // SMTP password (Use App Password for Gmail)
+        $mail->Password   = '';    // SMTP password (Use App Password for Gmail)
         $mail->SMTPSecure = 'tls';                 // Enable TLS encryption
         $mail->Port       = 587;                   // TCP port to connect to
 
