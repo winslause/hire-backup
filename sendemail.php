@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Host = 'smtp.gmail.com';                     // Specify main and backup SMTP servers
                 $mail->SMTPAuth = true;                             // Enable SMTP authentication
                 $mail->Username = 'wenbusale383@gmail.com';         // Your company email address
-                $mail->Password = 'bfmd neqb ltiv txrp';            // App Password (or regular password if no 2FA)
+                $mail->Password = '';            // App Password (or regular password if no 2FA)
                 $mail->SMTPSecure = 'tls';                          // Enable TLS encryption
                 $mail->Port = 587;                                  // TCP port to connect to
 
